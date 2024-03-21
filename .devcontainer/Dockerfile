@@ -3,6 +3,9 @@
 ARG VARIANT="4.2"
 FROM ghcr.io/rocker-org/devcontainer/tidyverse:${VARIANT}
 
+# change user password
+RUN echo "${USER}:rstudious" | chpasswd
+
 # Example of adding R package automatically
 RUN install2.r --error --skipinstalled -n -1 \
         httpgd \

@@ -1,0 +1,38 @@
+{
+	"name": "RStudio Environment",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+
+	// Install Dev Container Features. More info: https://containers.dev/features
+	"features": {
+		// Install IRkernel.
+		// More info: https://github.com/rocker-org/devcontainer-templates/tree/main/src/r-ver
+		"ghcr.io/rocker-org/devcontainer-features/r-rig:1": {
+			"version": "none"
+		}
+	},
+
+	"customizations": {
+		"vscode": {
+			"extensions": [
+	      "REditorSupport.r", // Add Rstudio extension
+				"GitHub.copilot" // Add github copilot extension
+			]
+		}
+	},
+
+	// Forward Jupyter and RStudio ports
+	"forwardPorts": [8787, 8888],
+	"portsAttributes": {
+		"8787": {
+			"label": "Rstudio",
+			"requireLocalPort": true,
+			"onAutoForward": "ignore"
+		}
+	},
+
+	// Use 'postAttachCommand' to run commands after the container is started.
+	"postAttachCommand": "sudo rstudio-server start"
+
+}

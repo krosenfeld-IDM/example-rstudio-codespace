@@ -33,6 +33,6 @@
 	},
 
 	// Use 'postAttachCommand' to run commands after the container is started.
-	"postAttachCommand": "sudo rstudio-server start --auth-none=1"
+	"postAttachCommand": "sudo rstudio-server start"
 
 }

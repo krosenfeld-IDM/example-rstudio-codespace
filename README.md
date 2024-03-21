@@ -5,4 +5,5 @@ Sandbox for running RStudio using github codespaces
 
 **To open RStudio:**
 
-![find-rstudio](https://github.com/krosenfeld-IDM/example-rstudio-codespace/assets/56368533/146db921-0f2b-44c3-812d-8db46b03e128)
+https://github.com/krosenfeld-IDM/example-rstudio-codespace/assets/56368533/71090a30-1c35-48ae-a12a-b07a7c7975fc
+

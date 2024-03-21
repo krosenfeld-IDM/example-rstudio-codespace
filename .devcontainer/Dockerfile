@@ -5,5 +5,6 @@ FROM ghcr.io/rocker-org/devcontainer/tidyverse:${VARIANT}
 
 # Example of adding R package automatically
 RUN install2.r --error --skipinstalled -n -1 \
+        httpgd \
         cowsay \
     && rm -rf /tmp/downloaded_packages
